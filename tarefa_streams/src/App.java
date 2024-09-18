@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -26,9 +27,25 @@ public class App {
                 lista.addPessoa(new Pessoa(nome, sexo));
         }
 
-        System.out.println("\nLista de pessoas do sexo Masculino: \n" + lista.getMale() + "\n");
-        System.out.println("Lista de pessoas do sexo Feminino: \n" + lista.getFemale() + "\n");
+        // Anterior, sem uso de lambda e stream.
 
+        /*
+         * System.out.println("\nLista de pessoas do sexo Masculino: \n" +
+         * lista.getMale() + "\n");
+         * System.out.println("Lista de pessoas do sexo Feminino: \n" +
+         * lista.getFemale() + "\n");
+         */
+
+        System.out.println("\nLista de pessoas do sexo Masculino:");
+        lista.getAll().stream().filter(p -> Pessoa.isValidMale(p.getSexo()))
+                .forEach(System.out::println);
+        System.out.println();
+
+        System.out.println("Lista de pessoas do sexo Feminino:");
+        lista.getAll().stream().filter(p -> Pessoa.isValidFemale(p.getSexo()))
+                .forEach(System.out::println);
+        System.out.println();
+        
         System.out.println(
                 "Caso algum item não tenha sido exibido, certifique-se que a lista foi digitada conforme a orientação inicial do programa.");
 
