@@ -1,0 +1,3 @@
+com\gudias\dao\ProductDAO.class
+com\gudias\dao\IProductDAO.class
+com\gudias\domain\Product.class

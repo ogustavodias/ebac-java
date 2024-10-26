@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.gudias.ProductTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.758 s <<< FAILURE! - in com.gudias.ProductTest
+register(com.gudias.ProductTest)  Time elapsed: 0.724 s  <<< ERROR!
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver.connect() [Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at com.gudias.ProductTest.register(ProductTest.java:12)
+Caused by: org.hibernate.exception.JDBCConnectionException: Error calling Driver.connect() [Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.] [n/a]
+	at com.gudias.ProductTest.register(ProductTest.java:12)
+Caused by: org.postgresql.util.PSQLException: Connection to localhost:15432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at com.gudias.ProductTest.register(ProductTest.java:12)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at com.gudias.ProductTest.register(ProductTest.java:12)
+
