@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.CarsDAOTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.098 s <<< FAILURE! - in com.CarsDAOTest
+register(com.CarsDAOTest)  Time elapsed: 0.06 s  <<< ERROR!
+jakarta.persistence.PersistenceException: No Persistence provider for EntityManager named Cars
+	at com.CarsDAOTest.register(CarsDAOTest.java:25)
+
