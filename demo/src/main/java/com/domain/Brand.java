@@ -1,10 +1,13 @@
 package com.domain;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,6 +21,9 @@ public class Brand {
 
   @Column(name = "name", nullable = false)
   private String name;
+
+  @OneToMany(mappedBy = "brand")
+  private List<Car> cars;
 
   public Brand(String name) {
     this.name = name;

@@ -2,11 +2,14 @@ package com.domain;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -16,13 +19,15 @@ public class Car {
   @Id
   @Column(name = "id", nullable = false)
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;  
+  private Long id;
 
   @Column(name = "model", nullable = false)
   private String model;
 
+  @ManyToOne(cascade = CascadeType.ALL)
   private Brand brand;
 
+  @ManyToMany(cascade = CascadeType.ALL)
   private List<Accessory> accessories;
 
   public Car(String model, Brand brand, List<Accessory> accessories) {
