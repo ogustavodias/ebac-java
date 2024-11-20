@@ -35,6 +35,10 @@ public class Sale {
     this.products = products;
   }
 
+  public Sale() {
+
+  }
+
   public Long getId() {
     return id;
   }
@@ -49,6 +53,18 @@ public class Sale {
 
   public List<Product> getProducts() {
     return products;
+  }
+
+  public void setCode(String code) {
+    this.code = code;
+  }
+
+  public void setCustomer(Customer customer) {
+    this.customer = customer;
+  }
+
+  public void setProducts(List<Product> products) {
+    this.products = products;
   }
 
 }

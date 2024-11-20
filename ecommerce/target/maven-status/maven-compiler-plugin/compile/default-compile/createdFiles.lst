@@ -1,0 +1,4 @@
+domain\Sale.class
+dao\SaleDAO.class
+domain\Customer.class
+domain\Product.class

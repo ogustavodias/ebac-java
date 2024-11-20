@@ -28,6 +28,10 @@ public class Customer {
     this.name = name;
   }
 
+  public Customer() {
+
+  }
+
   public Long getId() {
     return id;
   }
@@ -38,6 +42,14 @@ public class Customer {
 
   public List<Sale> getSales() {
     return sales;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setSales(List<Sale> sales) {
+    this.sales = sales;
   }
 
 }

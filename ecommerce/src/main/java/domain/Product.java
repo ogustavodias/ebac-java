@@ -33,6 +33,10 @@ public class Product {
     this.price = price;
   }
 
+  public Product() {
+
+  }
+
   public Long getId() {
     return id;
   }
@@ -47,6 +51,18 @@ public class Product {
 
   public List<Sale> getSales() {
     return sales;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
+
+  public void setSales(List<Sale> sales) {
+    this.sales = sales;
   }
 
 }
