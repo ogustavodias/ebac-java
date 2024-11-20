@@ -1,0 +1,4 @@
+domain\Car.class
+dao\CarDAO.class
+domain\Accessory.class
+domain\Brand.class
